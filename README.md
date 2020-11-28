@@ -9,4 +9,4 @@ Creacion de un finder al estilo macOs realizado solo con HTML y CSS (usando sass
 
 ---
 
-# [DEMO](https://gac982.github.io/finder_mac_css.github.io/index.html "demo")
+# [DEMO](https://gac982.github.io/finder_mac_css/index.html "demo")
