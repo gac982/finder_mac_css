@@ -1,0 +1,172 @@
+body
+	overflow: hidden
+.main
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 2rem
+	.finder
+		cursor: pointer
+	.hide
+		visibility: hidden
+		transition: 1s
+		transform: scale(0)
+		opacity: 0
+	.container
+		position: absolute
+		top: 1rem
+		left: 10rem
+		right: 10rem
+		display: grid
+		grid-template-columns: .5fr repeat(2, 1fr)
+		grid-template-rows: .3fr 2fr
+		width: 70vw
+		background-color: $grisOscuro
+		border-radius: .5rem
+		box-shadow: $finderShadow
+		z-index: 10
+		.header
+			grid-column: 1 / 4
+			grid-row: 1 / 2
+			display: grid
+			grid-template-rows: repeat(2, .3fr)
+			background-color: $grisNavbar
+			border-radius: .5rem .5rem 0 0
+			.headerTop
+				display: grid
+				grid-template-columns: .3fr 2fr
+				.headerIconsLeft
+					display: flex
+					padding: 1rem
+					.headerIconClose
+						@include iconTopBar
+						background-color: $redClose
+						.imgHeader
+							display: none
+							width: .5rem
+						&:hover
+							.imgHeader
+								display: block
+					.headerIconMinimize
+						@include iconTopBar
+						background-color: $yellowMinimize
+						.imgHeader
+							display: none
+							width: .5rem
+						&:hover
+							.imgHeader
+								display: block
+					.headerIconOpen
+						@include iconTopBar
+						background-color: $greenExpant
+						.imgHeader
+							display: none
+							width: .5rem
+						&:hover
+							.imgHeader
+								display: block
+			.headerTitle
+				display: flex
+				align-items: center
+				justify-content: center
+				.header_IconTitle
+					width: 1rem
+					height: 1rem
+					margin: 0 .3rem
+			.navbar
+				display: grid
+				grid-template-columns: .4fr 2fr 1fr
+				grid-template-rows: .8fr
+				padding: .5rem
+				.arrows
+					display: flex
+					align-items: center
+					padding: 0 .5rem
+					.iconArrow
+						@include iconNavbar
+						margin: 0 .1rem
+				.navbarPanel
+					display: flex
+					align-items: center
+					justify-content: center
+					.navbarPanelLeft
+						display: flex
+						align-items: center
+						margin-right: 1rem
+						.iconPanelLeft
+							@include iconNavbarPanelLeft
+						.active
+							background-color: $grisOscuro
+							border-radius: .5rem 0 0 .5rem
+						.final
+							border-radius: 0 .5rem .5rem 0
+					.navbarPanelRight
+						display: flex
+						.iconPanelRight
+							margin: 0 .3rem
+							@include iconNavbarPanelRight
+				.navbarSearch
+					display: flex
+					justify-content: center
+					align-items: center
+					background-color: $sidebarColor
+					margin: 0 .5rem
+					border-radius: .5rem
+					position: relative
+					.iconSearch
+						position: absolute
+						width: 1rem
+						height: 1rem
+						left: 5rem
+					.navbarSearchText
+						font-size: .9rem
+						margin: 0 1rem
+						color: $grisOscuro
+						font-weight: bold
+						border: none
+						background-color: transparent
+						text-align: center
+		.sidebar
+			display: flex
+			flex-direction: column
+			background-color: $sidebarColor
+			border-radius: 0 0 0 .5rem
+			.sidebarSection
+				padding: .5rem
+				.sidebarTitle
+					color: $grisOscuro
+					font-weight: bold
+				.sidebarGroup
+					display: flex
+					align-items: center
+					cursor: pointer
+					.sidebarIcons
+						width: 1.2rem
+						height: 1.2rem
+						margin: 0 .5rem
+		.space
+			background-color: white
+			grid-column: 2 / 4
+			grid-row: 2 /3
+			display: flex
+			grid-gap: 3rem
+			padding: 1rem
+			border-radius: 0 0 .5rem 0
+			.spaceIcon
+				display: flex
+				flex-direction: column
+				align-items: center
+				cursor: pointer
+				&:hover
+					.spaceTitle
+						background-color: $grisNavbar
+						padding: .3rem
+						color: white
+						border-radius: .3rem
+				.spaceIcons
+					width: 5rem
+					height: 5rem
+				.spaceTitle
+					font-size: .9rem
+
+
